@@ -18,6 +18,7 @@ class Details extends Component{
                     <label> {this.props.detail.name.first } </label> 
                     <label> {this.props.detail.email } </label>
                 </div> */}
+                
                 </div>
             </div>
                  )
