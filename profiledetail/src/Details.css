@@ -1,0 +1,10 @@
+.margin{
+    margin-bottom: 20px;
+  }
+  
+  .columnItem{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    
+  }

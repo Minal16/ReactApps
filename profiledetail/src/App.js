@@ -59,7 +59,7 @@ class App extends Component {
                 <div  key={index} className="rowItem" >
                  <img className="image" src={item.picture.thumbnail} alt="" />
                  <div className="columnItem">
-                 <Link to={`/detail/${index}`}>{item.name.first}</Link>
+                 <Link to={`/detail/${item.id.value}`}>{item.name.first}</Link>
                   <label >{item.email}    </label>
                   </div>
               
