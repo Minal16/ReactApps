@@ -24,13 +24,15 @@ class Details extends Component{
         fetch("https://randomuser.me/api/?id=" + this.props.match.params.index).then((res) => {
             return res.json();
         }).then((response)=> {
-            this.setState(function (state, props) { // Functional setState
-                if(state.isMounted){
-                     return {
-                        profile : response.results[0]
-                      }
-                    }
-                });
+            if(response && response.results){
+                this.setState(function (state, props) { // Functional setState
+                    if(state.isMounted){
+                         return {
+                            profile : response.results[0]
+                          }
+                        }
+                    });
+            }
         }).catch((err)=>{
             console.log(err);
         });
