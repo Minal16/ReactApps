@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom'
+import './Details.css'
 
 class Details extends Component{
     constructor(props){
@@ -41,14 +42,14 @@ class Details extends Component{
     render(){
 
         return(
-            <div className="margin">
+            <div >
             <Link to="/" >Back to List </Link>
              { this.state && this.state.profile &&
                     <div className="margin">
-                        <img src={this.state.profile.picture.thumbnail} alt="" />
+                        <img src={this.state.profile.picture.large} alt="" />
                             <div className="columnItem">
-                                <label> {this.state.profile.name.first } </label> 
-                                <label> {this.state.profile.email } </label>
+                                <label> Name: {this.state.profile.name.first } </label> 
+                                <label> Email: {this.state.profile.email } </label>
                             </div>  
                     </div>
              }
